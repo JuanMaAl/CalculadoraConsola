@@ -41,10 +41,10 @@ public class CalculadoraApp {
 
     private static void ejecutarOperacion(int operacion, Scanner consola){
         System.out.print("Proporciona valor operando1: ");
-        var operando1 = Integer.parseInt(consola.nextLine());
+        var operando1 = Double.parseDouble(consola.nextLine());
         System.out.print("Proporciona valor operando2: ");
-        var operando2 = Integer.parseInt(consola.nextLine());
-        int resultado;
+        var operando2 = Double.parseDouble(consola.nextLine());
+        double resultado;
         switch (operacion) {
             case 1 -> { //Suma
                 resultado = operando1 + operando2;
