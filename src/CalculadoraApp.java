@@ -4,16 +4,9 @@ public class CalculadoraApp {
     public static void main(String[] args) {
         Scanner consola = new Scanner(System.in);
         while (true) {
-            //Mostramos el Menú
             System.out.println("**** Aplicación Calculadora ****");
-            System.out.println("""
-                    1.Suma
-                    2.Resta
-                    3.Multiplicación
-                    4.División
-                    5.Salir
-                    """);
-            System.out.print("¿Operación a realizar? ");
+            //Mostramos el Menú
+            mostrarMenu();
             try {
                 var operacion = Integer.parseInt(consola.nextLine());
                 //Revisar que este dentro de las opciones mencionadas
@@ -55,4 +48,17 @@ public class CalculadoraApp {
             }
         } //fin while
     } //fin main
+
+    private static void mostrarMenu(){
+        //Mostramos el Menú
+        System.out.println("""
+                    1.Suma
+                    2.Resta
+                    3.Multiplicación
+                    4.División
+                    5.Salir
+                    """);
+        System.out.print("¿Operación a realizar? ");
+    }
+
 } //fin clase
